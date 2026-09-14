@@ -1,0 +1,139 @@
+@HelpDesk.API_HostAddress = https://localhost:7153
+
+POST {{HelpDesk.API_HostAddress}}/api/Tickets/8/comments
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjgzMGFkOTJhLTQwYWEtNDg2ZS04YzE5LTE5NzZjYTNlZDQ3NSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJqb2huIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiRW1wbG95ZWUiLCJleHAiOjE3ODkzNzAxNDUsImlzcyI6IkhlbHBEZXNrLkFQSSIsImF1ZCI6IkhlbHBEZXNrLkNsaWVudCJ9.rSKwKPCk3aedyLQmYbsREzmfy8bRTKrc9tdMHBClx4I
+Content-Type: application/json
+
+{
+    "comment": "I have restarted the laptop and the issue still occurs.",
+    "createdBy": "admin"
+}
+
+###
+
+GET {{HelpDesk.API_HostAddress}}/api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjgzMGFkOTJhLTQwYWEtNDg2ZS04YzE5LTE5NzZjYTNlZDQ3NSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJqb2huIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiU3VwcG9ydEFnZW50IiwiZXhwIjoxNzg5Mzc0ODkxLCJpc3MiOiJIZWxwRGVzay5BUEkiLCJhdWQiOiJIZWxwRGVzay5DbGllbnQifQ.59qD_xzGGkFMc60kM7789yFiZR64YyiQDx5kztq3Ru4
+
+###
+
+GET {{HelpDesk.API_HostAddress}}/api/Tickets/4
+
+###
+
+PUT {{HelpDesk.API_HostAddress}}/api/Tickets/4
+Content-Type: application/json
+
+{
+  "title": "Keyboard issue - Updated",
+  "description": "The keyboard has been replaced and is working now.",
+  "status": "InProgress",
+  "priority": "Medium",
+  "createdBy": "Michael",
+  "assignedTo": "Agent Smith"
+}
+
+###
+
+GET {{HelpDesk.API_HostAddress}}/api/Tickets/4
+
+###
+
+DELETE {{HelpDesk.API_HostAddress}}/api/Tickets/8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjgzMGFkOTJhLTQwYWEtNDg2ZS04YzE5LTE5NzZjYTNlZDQ3NSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJqb2huIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiU3VwcG9ydEFnZW50IiwiZXhwIjoxNzg5Mzc0ODkxLCJpc3MiOiJIZWxwRGVzay5BUEkiLCJhdWQiOiJIZWxwRGVzay5DbGllbnQifQ.59qD_xzGGkFMc60kM7789yFiZR64YyiQDx5kztq3Ru4
+
+###
+
+POST {{HelpDesk.API_HostAddress}}/api/Tickets
+Content-Type: application/json
+
+{
+  "title": "Monitor is not working",
+  "description": "The employee's monitor is displaying a black screen.",
+  "status": "Open",
+  "priority": "Critical",
+  "createdBy": "Alex"
+}
+
+###
+
+PUT {{HelpDesk.API_HostAddress}}/api/Tickets/8/assign
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjgzMGFkOTJhLTQwYWEtNDg2ZS04YzE5LTE5NzZjYTNlZDQ3NSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJqb2huIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiU3VwcG9ydEFnZW50IiwiZXhwIjoxNzg5Mzc0ODkxLCJpc3MiOiJIZWxwRGVzay5BUEkiLCJhdWQiOiJIZWxwRGVzay5DbGllbnQifQ.59qD_xzGGkFMc60kM7789yFiZR64YyiQDx5kztq3Ru4
+Content-Type: application/json
+
+{
+   "assignedTo": "john"
+}
+
+###
+POST {{HelpDesk.API_HostAddress}}/api/Tickets/4/comments
+Content-Type: application/json
+
+{
+  "comment": "Testing the comment API response.",
+  "createdBy": "Agent Smith"
+}
+
+###
+GET {{HelpDesk.API_HostAddress}}/api/Tickets/4/comments
+
+###
+GET {{HelpDesk.API_HostAddress}}/api/Tickets?status=InProgress
+
+###
+GET {{HelpDesk.API_HostAddress}}/api/Tickets?status=Open&priority=High
+
+###
+GET {{HelpDesk.API_HostAddress}}/api/Tickets?assignedTo=Agent%20Smith
+
+###
+GET {{HelpDesk.API_HostAddress}}/api/Tickets?status=InProgress&assignedTo=Agent%20Smith
+
+###
+GET {{HelpDesk.API_HostAddress}}/api/Tickets?page=1&pageSize=2
+
+###
+
+GET {{HelpDesk.API_HostAddress}}/api/Tickets?page=2&pageSize=2
+
+###
+
+POST {{HelpDesk.API_HostAddress}}/api/Auth/register
+Content-Type: application/json
+
+{
+  "username": "john",
+  "email": "john@example.com",
+  "password": "Password123!"
+}
+
+###
+
+POST {{HelpDesk.API_HostAddress}}/api/Auth/login
+Content-Type: application/json
+
+{
+  "username": "john",
+  "password": "Password123!"
+}
+
+###
+
+PUT {{HelpDesk.API_HostAddress}}/api/Tickets/8/assign
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjgzMGFkOTJhLTQwYWEtNDg2ZS04YzE5LTE5NzZjYTNlZDQ3NSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJqb2huIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiU3VwcG9ydEFnZW50IiwiZXhwIjoxNzg5Mzc0ODkxLCJpc3MiOiJIZWxwRGVzay5BUEkiLCJhdWQiOiJIZWxwRGVzay5DbGllbnQifQ.59qD_xzGGkFMc60kM7789yFiZR64YyiQDx5kztq3Ru4
+Content-Type: application/json
+
+{
+  "assignedTo": "john"
+}
+
+### Change John to SupportAgent
+
+PUT {{HelpDesk.API_HostAddress}}/api/Users/830ad92a-40aa-486e-8c19-1976ca3ed475/role
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjgzMGFkOTJhLTQwYWEtNDg2ZS04YzE5LTE5NzZjYTNlZDQ3NSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJqb2huIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjpbIkFkbWluIiwiRW1wbG95ZWUiXSwiZXhwIjoxNzg5Mzc0MjQ5LCJpc3MiOiJIZWxwRGVzay5BUEkiLCJhdWQiOiJIZWxwRGVzay5DbGllbnQifQ.2vTmtUfzb-p4fdjSEAR-uvoQBqGJmpS0vZAXwqNzZ5k
+Content-Type: application/json
+
+{
+  "role": "SupportAgent"
+}
+
+
