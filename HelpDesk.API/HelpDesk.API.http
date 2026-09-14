@@ -1,7 +1,7 @@
 @HelpDesk.API_HostAddress = https://localhost:7153
 
 POST {{HelpDesk.API_HostAddress}}/api/Tickets/8/comments
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjgzMGFkOTJhLTQwYWEtNDg2ZS04YzE5LTE5NzZjYTNlZDQ3NSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJqb2huIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiRW1wbG95ZWUiLCJleHAiOjE3ODkzNzAxNDUsImlzcyI6IkhlbHBEZXNrLkFQSSIsImF1ZCI6IkhlbHBEZXNrLkNsaWVudCJ9.rSKwKPCk3aedyLQmYbsREzmfy8bRTKrc9tdMHBClx4I
+Authorization: Bearer YOUR_TOKEN_HERE
 Content-Type: application/json
 
 {
@@ -12,8 +12,7 @@ Content-Type: application/json
 ###
 
 GET {{HelpDesk.API_HostAddress}}/api/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjgzMGFkOTJhLTQwYWEtNDg2ZS04YzE5LTE5NzZjYTNlZDQ3NSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJqb2huIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiU3VwcG9ydEFnZW50IiwiZXhwIjoxNzg5Mzc0ODkxLCJpc3MiOiJIZWxwRGVzay5BUEkiLCJhdWQiOiJIZWxwRGVzay5DbGllbnQifQ.59qD_xzGGkFMc60kM7789yFiZR64YyiQDx5kztq3Ru4
-
+Authorization: Bearer YOUR_TOKEN_HERE
 ###
 
 GET {{HelpDesk.API_HostAddress}}/api/Tickets/4
@@ -39,8 +38,7 @@ GET {{HelpDesk.API_HostAddress}}/api/Tickets/4
 ###
 
 DELETE {{HelpDesk.API_HostAddress}}/api/Tickets/8
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjgzMGFkOTJhLTQwYWEtNDg2ZS04YzE5LTE5NzZjYTNlZDQ3NSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJqb2huIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiU3VwcG9ydEFnZW50IiwiZXhwIjoxNzg5Mzc0ODkxLCJpc3MiOiJIZWxwRGVzay5BUEkiLCJhdWQiOiJIZWxwRGVzay5DbGllbnQifQ.59qD_xzGGkFMc60kM7789yFiZR64YyiQDx5kztq3Ru4
-
+Authorization: Bearer YOUR_TOKEN_HERE
 ###
 
 POST {{HelpDesk.API_HostAddress}}/api/Tickets
@@ -57,7 +55,7 @@ Content-Type: application/json
 ###
 
 PUT {{HelpDesk.API_HostAddress}}/api/Tickets/8/assign
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjgzMGFkOTJhLTQwYWEtNDg2ZS04YzE5LTE5NzZjYTNlZDQ3NSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJqb2huIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiU3VwcG9ydEFnZW50IiwiZXhwIjoxNzg5Mzc0ODkxLCJpc3MiOiJIZWxwRGVzay5BUEkiLCJhdWQiOiJIZWxwRGVzay5DbGllbnQifQ.59qD_xzGGkFMc60kM7789yFiZR64YyiQDx5kztq3Ru4
+Authorization: Bearer YOUR_TOKEN_HERE
 Content-Type: application/json
 
 {
@@ -103,7 +101,7 @@ Content-Type: application/json
 {
   "username": "john",
   "email": "john@example.com",
-  "password": "Password123!"
+  "password": "YOUR_PASSWORD_HERE"
 }
 
 ###
@@ -113,13 +111,13 @@ Content-Type: application/json
 
 {
   "username": "john",
-  "password": "Password123!"
+  "password": "YOUR_PASSWORD_HERE"
 }
 
 ###
 
 PUT {{HelpDesk.API_HostAddress}}/api/Tickets/8/assign
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjgzMGFkOTJhLTQwYWEtNDg2ZS04YzE5LTE5NzZjYTNlZDQ3NSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJqb2huIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiU3VwcG9ydEFnZW50IiwiZXhwIjoxNzg5Mzc0ODkxLCJpc3MiOiJIZWxwRGVzay5BUEkiLCJhdWQiOiJIZWxwRGVzay5DbGllbnQifQ.59qD_xzGGkFMc60kM7789yFiZR64YyiQDx5kztq3Ru4
+Authorization: Bearer YOUR_TOKEN_HERE
 Content-Type: application/json
 
 {
@@ -129,7 +127,7 @@ Content-Type: application/json
 ### Change John to SupportAgent
 
 PUT {{HelpDesk.API_HostAddress}}/api/Users/830ad92a-40aa-486e-8c19-1976ca3ed475/role
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjgzMGFkOTJhLTQwYWEtNDg2ZS04YzE5LTE5NzZjYTNlZDQ3NSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJqb2huIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjpbIkFkbWluIiwiRW1wbG95ZWUiXSwiZXhwIjoxNzg5Mzc0MjQ5LCJpc3MiOiJIZWxwRGVzay5BUEkiLCJhdWQiOiJIZWxwRGVzay5DbGllbnQifQ.2vTmtUfzb-p4fdjSEAR-uvoQBqGJmpS0vZAXwqNzZ5k
+Authorization: Bearer YOUR_TOKEN_HERE
 Content-Type: application/json
 
 {
