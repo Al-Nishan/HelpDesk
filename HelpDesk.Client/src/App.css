@@ -1,0 +1,16 @@
+.ticket-card {
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 700px;
+  text-align: left;
+}
+
+.ticket-card h3 {
+  margin-top: 0;
+}
+
+.ticket-card p {
+  margin: 8px 0;
+}

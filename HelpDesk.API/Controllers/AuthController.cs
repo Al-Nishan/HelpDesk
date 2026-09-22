@@ -38,13 +38,29 @@ namespace HelpDesk.API.Controllers
                 Email = request.Email
             };
 
-            var roleResult = await _userManager.AddToRoleAsync(user, "Employee");
+            var createResult = await _userManager.CreateAsync(
+                user,
+                request.Password);
+
+            if (!createResult.Succeeded)
+            {
+                return BadRequest(new
+                {
+                    message = "User registration failed.",
+                    errors = createResult.Errors.Select(e => e.Description)
+                });
+            }
+
+            var roleResult = await _userManager.AddToRoleAsync(
+                user,
+                "Employee");
 
             if (!roleResult.Succeeded)
             {
                 return StatusCode(500, new
                 {
-                    message = "User was created, but assigning the default role failed."
+                    message = "User was created, but assigning the default role failed.",
+                    errors = roleResult.Errors.Select(e => e.Description)
                 });
             }
 
