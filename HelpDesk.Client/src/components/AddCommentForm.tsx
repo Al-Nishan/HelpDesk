@@ -15,36 +15,40 @@ function AddCommentForm({
   const [comment, setComment] = useState("");
 
   return (
-    <div>
-      <h4>Add Comment</h4>
+    <div className="comment-form">
+      <h4>Add a comment</h4>
 
       <textarea
         value={comment}
         onChange={(event) => setComment(event.target.value)}
-        placeholder="Enter your comment"
+        placeholder="Write a comment..."
+        rows={4}
       />
 
-      <br />
-      <br />
+      <div className="comment-form-actions">
+        <button
+          type="button"
+          onClick={async () => {
+            try {
+              await addComment(ticketId, comment);
+              onAdded();
+            } catch (error) {
+              console.error("Failed to add comment:", error);
+              alert("Failed to add comment.");
+            }
+          }}
+        >
+          Add Comment
+        </button>
 
-      <button
-        type="button"
-        onClick={async () => {
-          try {
-            await addComment(ticketId, comment);
-            onAdded();
-          } catch (error) {
-            console.error("Failed to add comment:", error);
-            alert("Failed to add comment.");
-          }
-        }}
-      >
-        Add Comment
-      </button>
-
-      <button type="button" onClick={onCancel}>
-        Cancel
-      </button>
+        <button
+          type="button"
+          className="secondary-button"
+          onClick={onCancel}
+        >
+          Cancel
+        </button>
+      </div>
     </div>
   );
 }

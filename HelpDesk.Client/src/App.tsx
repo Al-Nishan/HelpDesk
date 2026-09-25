@@ -3,6 +3,7 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import CreateTicket from "./pages/CreateTicket";
 import ProtectedRoute from "./components/ProtectedRoute";
+import "./App.css"
 
 function App() {
   return (

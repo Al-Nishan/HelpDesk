@@ -4,9 +4,10 @@ import type { TicketComment } from "../types/Comment";
 
 interface CommentsListProps {
   ticketId: number;
+  refreshKey?: number;
 }
 
-function CommentsList({ ticketId }: CommentsListProps) {
+function CommentsList({ ticketId, refreshKey }: CommentsListProps) {
   const [comments, setComments] = useState<TicketComment[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -23,7 +24,7 @@ function CommentsList({ ticketId }: CommentsListProps) {
     }
 
     loadComments();
-  }, [ticketId]);
+  }, [ticketId, refreshKey]);
 
   if (loading) {
     return <p>Loading comments...</p>;
@@ -38,13 +39,16 @@ function CommentsList({ ticketId }: CommentsListProps) {
       <h4>Comments</h4>
 
       {comments.map((comment) => (
-        <div key={comment.id}>
-          <p>{comment.comment}</p>
+        <div className="comment-item" key={comment.id}>
+          <div className="comment-header">
+            <strong>{comment.createdBy}</strong>
 
-          <small>
-            {comment.createdBy} ·{" "}
-            {new Date(comment.createdAt).toLocaleString()}
-          </small>
+            <small>
+              {new Date(comment.createdAt).toLocaleString()}
+            </small>
+          </div>
+
+          <p>{comment.comment}</p>
         </div>
       ))}
     </div>
